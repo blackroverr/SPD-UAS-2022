@@ -74,7 +74,7 @@ class FileController extends Controller
         Session::remove('folder');
         Session::remove('filename');
 
-        return response()->json(['status' => false, 'message' => 'Data Berhasil diupload']);
-        // return redirect('/file-manager-page')->with('status', 'File has been uploaded Successfully!');
+        // return response()->json(['status' => false, 'message' => 'Data Berhasil diupload']);
+        return redirect('/file-manager-page')->with('status', 'File has been uploaded Successfully!');
     }   
 }
