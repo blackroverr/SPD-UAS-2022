@@ -134,11 +134,15 @@
                             <div class="absolute left-0 top-0 mt-3 ml-3">
                                 <input class="form-check-input border border-slate-500" type="checkbox" >
                             </div>
-                            <button  class="w-3/5 file__icon file__icon--image mx-auto">
+                            <a href="{{$row['url']}}" class="w-3/5 file__icon file__icon--file mx-auto">
+                                <div class="file__icon__file-name"></div>
+                            </a>
+                            {{-- <button  class="w-3/5 file__icon file__icon--image mx-auto">
                                 <div class="file__icon--image__preview image-fit">
-                                    <img  class="w-3/5 file__icon file__icon--directory mx-auto"  alt="{{ $row['filename'] }}">
-                                </div>
-                            </button>
+                                    <img  src="{{ $row['url'] }}"  alt="{{ $row['filename'] }}" data-action="zoom">
+                                    {{-- <a href="{{$row['url']}}"></a> --}}
+                                {{-- </div> --}}
+                            {{-- </button> --}} 
                             <h5 style="text-align: center; position: relative; font-size: 10px;">{{$row['filename']}}</h5>
                             
                             {{-- @if ($faker['files'][0]['type'] == 'Empty Folder')

@@ -13,13 +13,13 @@ class FileController extends Controller
 {
     public function index()
     {
-        $files = scandir(storage_path('app/files/'));
+        $files = scandir(public_path('storage/'));
         $data = [];
         foreach ($files as $row) {
             if ($row != '.' && $row != '..') {
                 $data[] = [
                     'filename' => explode('.', $row)[0],
-                    'url' => asset('app/files/' . $row)
+                    'url' => asset('storage' . '/'. $row)
                 ];
             }
         }
